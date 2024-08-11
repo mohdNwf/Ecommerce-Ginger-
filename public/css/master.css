@@ -1,0 +1,229 @@
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+.footer-content h5 {
+    margin-top: 0px;
+
+}
+#h1ft{
+    margin-bottom: 25px;
+    color:white;
+}
+
+.navbar-text {
+    color: #ffffff !important;
+}
+::marker {
+    color: rgb(255, 255, 255);
+    font-size: -9px;
+}
+ul > li::marker {
+    font-size: 1rem;
+}
+.underline {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+
+}
+.underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    background-color: #ffffff;
+}
+.column1 .underline::after {
+    width: 100%;
+    position: absolute;
+    right: 200px;
+    left: 110%;
+
+    top: 40%;
+}
+.column2 .underline::after {
+    width: 150%;
+}
+.column3 .underline::after {
+    width: 115%; /
+}
+.column4 .underline::after {
+    width: 180%;
+}
+.column5 .underline::after {
+    width: 180%;
+
+}
+.footer-content ul li {
+    margin-bottom: 10px;
+}
+
+.bgimg {
+    background-image: url('https://media.istockphoto.com/id/1220524083/photo/white-grey-marble-floor-texture-background-with-high-resolution-counter-top-view-of-natural.jpg?s=612x612&w=0&k=20&c=TXzxhXz9BY8ROD1O2QUgNO1DMs5tlSn1uYaA5pZewis=');
+background-size: cover;
+background-position: center;
+
+
+}
+.btn-custom {
+    background-color: rgb(255, 255, 255);
+    border-radius: 2em;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 5px 28px;
+    font-size: 12px;
+    margin-top: 7px;
+}
+#yes{
+    background-color: white;
+    border-color: rgb(124, 122, 122);
+    color:rgb(59, 58, 58) ;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 2em;
+    padding-left:35px ;
+    padding-right:35px ;
+}
+.btn-custom:hover {
+    box-shadow: 0px 0px 9px rgb(244, 244, 77);
+    background-color: black;
+    color: white;
+}
+.active-custom {
+    box-shadow: 0px 0px 9px rgb(244, 244, 77);
+    background-color: black;
+    color: white;
+}
+
+.card-img-overlay img {
+    border-radius: 0;
+}
+#nav1 {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.navbar-left,
+.navbar-right {
+    flex: 1;
+    display: flex;
+}
+
+.navbar-left {
+    justify-content: center;
+}
+
+.navbar-right {
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+.navbar {
+    background-color: white;
+}
+#img {
+    width: 30px;
+}
+.search-container {
+    position: relative;
+}
+.form-control {
+    padding-right: 200px;
+}
+.search-button {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.search-button i {
+    color: #aaa7a7;
+    font-size: 16px;
+}
+.profile img {
+    width: 40px;
+    height: 40px;
+}
+.wallet, .cart, .profile, .country, .lang {
+    margin-left: 20px;
+}
+.wallet {
+    margin-left: 40px;
+}
+.navbar-brand img {
+    width: 60px;
+    height: 45px;
+}
+.icon-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+@media (max-width: 991px) {
+    .navbar-nav {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .form-control {
+        max-width: 70%;
+        margin-bottom: 10px;
+    }
+    .icon-container {
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .profile, .country {
+        margin: 0 auto 10px auto;
+    }
+    .profile img, .country img {
+        margin: 0;
+    }
+    .nav-link {
+        text-align: center;
+    }
+    .dropdown {
+        margin: 0 auto 10px auto;
+    }
+}
+@media (max-width: 768px) {
+    .search-button {
+        right: 70px;
+    }
+    .navbar-brand {
+        margin-left: 0;
+    }
+    .icon-container {
+        margin-bottom: 5px;
+    }
+    .profile, .country {
+        margin: 0 auto;
+    }
+ a{
+    text-decoration: none;
+    color: white;
+ }
+
+}

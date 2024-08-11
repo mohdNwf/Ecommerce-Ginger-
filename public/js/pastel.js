@@ -43,29 +43,15 @@
         });
     });
 
-    $(document).ready(function() {
-        // Function to load products via AJAX
-        function loadProducts() {
-            $.ajax({
-                url: "{{ route('products.fetch') }}",
-                method: "GET",
-                success: function(data) {
-                    $('#product-container').html(data);
-                },
-                error: function() {
-                    alert('Failed to load products');
-                }
-            });
+
+
+    function changeQuantity(button, amount) {
+        const input = button.parentNode.querySelector('.quantity-input');
+        const currentValue = parseInt(input.value);
+        if (currentValue + amount >= parseInt(input.min)) {
+            input.value = currentValue + amount;
         }
-
-        // Load products on page load
-        loadProducts();
-
-        // Example: Load products when a button is clicked
-        $('.filter-btn').click(function() {
-            loadProducts();
-        });
-    });
+    }
 
 
 

@@ -3,8 +3,10 @@
 use App\Http\Controllers\bannerController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PastelProductController;
 use App\Http\Controllers\ProductController;
+use App\Models\product;
 use Illuminate\Support\Facades\Route;
 
 Route::get('admin', function () {
@@ -12,7 +14,6 @@ Route::get('admin', function () {
 });
 
 
-Route::get('pastel', [ProductController::class,'pastel'])->name('pastel');
 Route::get('product', [ProductController::class,'product'])->name('product');
 Route::get('create', [ProductController::class,'create'])->name('create');
 Route::post('save', [ProductController::class,'save'])->name('save');
@@ -38,8 +39,21 @@ Route::get('editcarousel/{id}', [CarouselController::class,'editcarousel'])->nam
 Route::post('updatecarousel/{id}', [CarouselController::class,'updatecarousel'])->name('updatecarousel');
 Route::get('deletecarousel/{id}', [CarouselController::class,'deletecarousel'])->name('deletecarousel');
 Route::get('carousel1', [ProductController::class, 'showCarousel'])->name('carousel1');
+
+Route::post('dologin', [LoginController::class, 'dologin'])->name('dologin');
+Route::get('login', [LoginController::class, 'login'])->name('login');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+Route::group(['middleware'=>'user_auth'],function(){
+Route::get('pastel', [ProductController::class,'pastel'])->name('pastel');
 Route::get('all', [ProductController::class,'all'])->name('all');
 Route::get('selectcategory/{category_id}', [ProductController::class,'selectcategory'])->name('selectcategory');
 Route::get('showBanner', [ProductController::class, 'showBanner'])->name('showBanner');
-
+Route::get('demo', [ProductController::class, 'demo'])->name('demo');
+Route::get('productlisting', [ProductController::class, 'productlisting'])->name('productlisting');
+Route::get('Aboutus', [ProductController::class, 'Aboutus'])->name('Aboutus');
+Route::get('signup', [LoginController::class, 'signup'])->name('signup');
+Route::post('usersave', [LoginController::class, 'save'])->name('usersave');
+Route::get('add_cart/{id}', [productController::class, 'addCart'])->name('add_cart');
+Route::get('mycart', [productController::class, 'mycart'])->name('mycart');
+});
 

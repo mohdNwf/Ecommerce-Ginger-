@@ -126,11 +126,18 @@ h1 {
     padding: 5px;
 }
 #imgpc {
-    height: 200px;
+    height: 250px;
     margin-bottom: 10px;
     border-radius: 4px;
-
-    width: 100%;
+    width : 100%;
+}
+#boxcd{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 26rem;
+    width:16rem;
+    border-radius: 4px;
 
 }
 .card-badge{
@@ -145,127 +152,57 @@ font-size: 9px;
 font-weight: bolder;
 padding: 4px 6px 4px 6px;
 }
-.test {
+
+.test, .test1, .test2, .test3 {
     width: 15px;
     height: 15px;
-    background-color: rgb(255, 72, 0);
     border-radius: 50%;
     display: flex;
     position: absolute;
-    bottom:154px;
-   right: 83px;
-   border: white 2px solid;
+    border: white 2px solid;
 }
+
+.test {
+    background-color: rgb(255, 72, 0);
+    bottom: 164px;
+    right: 65px;
+}
+
 .test1 {
-    width: 15px;
-    height: 15px;
     background-color: rgb(106, 255, 0);
-    border-radius: 50%;
-    display: flex;
-    position: absolute;
-    bottom:154px;
-   right: 65px;
-   border: white 2px solid;
+    bottom: 164px;
+    right: 83px;
 }
+
 .test2 {
-    width: 15px;
-    height: 15px;
     background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    display: flex;
-    position: absolute;
-    bottom:154px;
-   right: 83px;
-   border: white 2px solid;
+    bottom: 164px;
+    right: 65px;
 }
+
 .test3 {
-    width: 15px;
-    height: 15px;
     background-color: rgb(0, 123, 255);
-    border-radius: 50%;
-    display: flex;
-    position: absolute;
-    bottom:154px;
-   right: 65px;
-   border: white 2px solid;
+    bottom: 164px;
+    right: 83px;
 }
-#boxcd.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20rem;
-    border-radius: 4px;
-}
-@media (max-width: 576px) {
 
-
-    #boxcd.card-body {
+@media (max-width: 767px) {
+    #boxcd {
+        height: 25rem;
         width: 100%;
-
     }
-    .test1 {
-    width: 15px;
-    height: 15px;
-    background-color: rgb(106, 255, 0);
-    border-radius: 50%;
-    display: flex;
-    position: absolute;
-    bottom:155px;
-   right: 20px;
-   border: white 2px solid;
-}
-.test {
-    width: 15px;
-    height: 15px;
-    background-color: rgb(255, 72, 0);
-    border-radius: 50%;
-    display: flex;
-    position: absolute;
-    bottom:155px;
-   right: 40px;
-   border: white 2px solid;
-}
-    .test2 {
-    width: 15px;
-    height: 15px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    display: flex;
-    position: absolute;
-    bottom:155px;
-   right: 20px;
-   border: white 2px solid;
-}
-.test3 {
-    width: 15px;
-    height: 15px;
-    background-color: rgb(0, 123, 255);
-    border-radius: 50%;
-    display: flex;
-    position: absolute;
-    bottom:155px;
-   right: 40px;
-   border: white 2px solid;
-}
-#boxcd.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 22rem;
-    border-radius: 4px;
-}
-}
-@media (min-width: 577px) {
-    #boxcd.card-body {
-        width: 13rem;
-        height: 21.9rem;
-
+    .product-card{
+        width: 100%;
     }
-}
 
-#card1 {
-width: 31rem;
-border: none;
+    .test, .test1, .test2, .test3 {
+        bottom: 155px;
+        right: 20px;
+    }
+
+    .test1, .test3 {
+        right: 40px;
+    }
 }
 @media (max-width: 767px) {
 #card1 {
@@ -339,8 +276,8 @@ padding: 10px;
 
 #but {
     background-color: black;
-    padding-left: 31px;
-    padding-right: 30px;
+    padding-left: 42px;
+    padding-right: 42px;
     padding-bottom: 13px;
     padding-top: 13px;
     border-radius: 2em;
@@ -359,7 +296,7 @@ padding: 10px;
 }
 
 .card-img-custom {
-    height: 180px;
+    height: 190px;
     margin-bottom: 10px;
     border-radius: 5px;
     width: 100%;
@@ -503,6 +440,20 @@ background-position: center;
 .card-img-overlay img {
     border-radius: 0;
 }
+#img {
+    width: 50px;
+    height: 50px;
+    margin-right: 4px;
+}
+.navbar-nav .nav-link {
+    white-space: nowrap;
+}
+.quantity-input {
+    width: 50px;
+    text-align: center;
+
+}
+
 #nav1 {
     background-color: black;
     color: white;
@@ -532,96 +483,25 @@ background-position: center;
 
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+/* Example custom Toastr styles */
+/* Example custom Toastr styles */
+.toast-ios {
+    background-color: #f7f7f7; /* iOS-like background color */
+    border: 1px solid #ddd; /* iOS-like border color */
+    color: #333; /* iOS-like text color */
+    font-family: Arial, sans-serif; /* iOS-like font */
+    width: 320px; /* Custom width */
+    max-width: 100%; /* Ensure it respects maximum width */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* iOS-like box shadow */
+    border-radius: 6px; /* iOS-like border radius */
 }
-.navbar {
-    background-color: white;
-}
-#img {
-    width: 30px;
-}
-.search-container {
-    position: relative;
-}
-.form-control {
-    padding-right: 200px;
-}
-.search-button {
-    position: absolute;
-    top: 50%;
-    right: -40px;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-.search-button i {
-    color: #aaa7a7;
-    font-size: 16px;
-}
-.profile img {
-    width: 40px;
-    height: 40px;
-}
-.wallet, .cart, .profile, .country, .lang {
-    margin-left: 20px;
-}
-.wallet {
-    margin-left: 40px;
-}
-.navbar-brand img {
-    width: 60px;
-    height: 45px;
-}
-.icon-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-@media (max-width: 991px) {
-    .navbar-nav {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .form-control {
-        max-width: 70%;
-        margin-bottom: 10px;
-    }
-    .icon-container {
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    .profile, .country {
-        margin: 0 auto 10px auto;
-    }
-    .profile img, .country img {
-        margin: 0;
-    }
-    .nav-link {
-        text-align: center;
-    }
-    .dropdown {
-        margin: 0 auto 10px auto;
-    }
-}
-@media (max-width: 768px) {
-    .search-button {
-        right: 70px;
-    }
-    .navbar-brand {
-        margin-left: 0;
-    }
-    .icon-container {
-        margin-bottom: 5px;
-    }
-    .profile, .country {
-        margin: 0 auto;
-    }
 
+.toast-ios .toast-message {
+    padding: 12px 20px; /* iOS-like padding */
+    font-size: 14px; /* iOS-like font size */
+}
 
+.toast-ios.toast-success {
+    background-color: #4CAF50; /* Custom success background color */
+    color: #fff; /* Custom success text color */
 }

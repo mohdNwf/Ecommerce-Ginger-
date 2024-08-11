@@ -1,0 +1,140 @@
+
+  /*  Helper Styles */
+
+        #exampleFormControlInput1{
+            background-color: #222121;
+            border-color: #888;
+            width: 55%;
+            padding-bottom: 11px;
+            padding-top: 11px;
+            color: white;
+        }
+        #exampleFormControlInput1::placeholder {
+            color: rgb(255, 255, 255); /* Change this to your desired color */
+        }
+
+        .dark {
+            color: #888;
+
+            display:inline-block;
+        }
+        /* Custom CSS for attached navbar */
+
+        .overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+}
+.navbar-nav .nav-item .nav-link:hover {
+            color: rgb(255, 72, 0) !important;
+
+        }
+
+    .find {
+        border: 1px solid rgba(162, 161, 161, 0.416);
+        width: 240px;
+        height: 270px;
+
+        flex-direction: column;
+        justify-content: center;
+    }
+    .find1 {
+        border: 1px solid rgba(162, 161, 161, 0.416);
+        width: 245px;
+        height:370px;
+
+    }
+    .col-sm-12{
+        background-color: rgb(236, 236, 236); /* Background color */
+      }
+
+
+
+    /* Styling the dropdown menu */
+    .form-select{
+        color: rgb(144, 143, 143);
+        background-color: rgb(238, 238, 238); /* Background color */
+        border: none; /* Remove border */
+        border-radius: 0; /* Remove border radius */
+        margin:  0px 15px 0px 15px;
+        padding: 8px 0px 8px 10px;
+       }
+       #bt{
+        border: none; /* Remove border */
+        background-color: rgb(255, 0, 0); /* Background color */
+        padding: 8px 53px 8px 51px;
+        display: inline;
+        border-radius: 0; /* Remove border radius */
+        margin-left: 15px;
+       }
+.col-sm-11{
+  background-color: rgb(236, 236, 236); /* Background color */
+}
+
+.card-custom {
+            border: none; /* Remove the border */
+            height: 100%; /* Set height to 100% */
+            display: flex; /* Use flexbox for the card layout */
+        }
+        .card-body{
+            background-color: rgb(238, 238, 238); /* Background color */
+            height: 100%; /* Set height to 100% */
+        }
+        .card-img {
+    width: 100%; /* Ensure the image fills its container */
+    object-fit: cover; /* Cover the container without distorting the image */
+    height: 100%; /* Set height to 100% */
+    border-radius: 0; /* Remove the border radius */
+        }
+
+.card-img-container {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Make the container fill the height of the card body */
+}
+
+        #butt{
+            padding-left: 40px;
+            padding-right:40px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            font-size: larger;
+        }
+
+.card-content {
+  padding: 20px;
+}
+.sidebar {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 20px;
+  }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  /* Adjust the card width for smaller screens */
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Further adjustments for even smaller screens */
+  .card-content {
+    padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+    .find,
+    .find1 {
+        width: 100%; /* Set width to 100% on smaller screens */
+        max-width: none; /* Remove max-width */
+        height: auto; /* Set height to auto to accommodate content */
+        margin-bottom: 20px; /* Add some bottom margin for spacing */
+    }
+
+
+}

@@ -6,6 +6,7 @@
 
 
 <body>
+
 <h2>Create Product</h2>
 <form action="{{route('save')}}" method="POST" enctype="multipart/form-data">
   @csrf

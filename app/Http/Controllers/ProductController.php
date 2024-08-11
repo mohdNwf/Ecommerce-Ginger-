@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProductSaveRequest;
 use App\Models\Banner;
 use App\Models\Carousel;
+use App\Models\cart;
 use App\Models\category;
 use App\Models\product;
+use App\Models\user;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -100,6 +103,33 @@ public function showCarousel()
     $carouselItems = Carousel::all();
     return view('pastel', compact('carouselItems'));
 }
+public function demo(){
+    return view('demo');
+}
+public function productlisting(){
+    return view('productlisting');
+}
+public function Aboutus(){
+    return view('Aboutus');
+}
+public function addCart($id,Request $request){
+$product_id = $id;
+$user = Auth::user();
+$user_id = $user->id;
+$data = new cart;
+$data->user_id = $user_id;
+$data->product_id = $product_id;
+$data->save();
+return redirect()->back()->with('success', 'Product added to the cart successfully.');
 
+}
+public function mycart(){
+    $user = Auth::user();
+$user_id = $user->id;
+$count = cart::where('user_id',$user_id)->count();
+$cartItems = cart::where('user_id',$user_id)->get();
+
+return view('mycart',compact('count','cartItems'));
+}
 }
 

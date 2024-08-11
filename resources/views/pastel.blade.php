@@ -11,10 +11,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/pastel.css') }}">
     <script src="{{ asset('js/pastel.js') }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+<!-- Toastr JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 
 </head>
-<body>
+
+    <script>
+        $(document).ready(function() {
+            @if(session('success'))
+                toastr.options = {
+                    "positionClass": "toast-top-center",
+                    "preventDuplicates": true,
+                    "timeOut": "3000", // Adjust timeout as needed
+                    "extendedTimeOut": "1000", // Adjust extended timeout as needed
+                    "showMethod": "slideDown",
+                    "hideMethod": "slideUp",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showDuration": 300,
+                    "hideDuration": 200,
+                    "width": "320px", // Set custom width
+                    "style": "ios" // Apply iOS style
+                };
+                toastr.success('{{ session('success') }}');
+            @endif
+        });
+    </script>
+
     <nav class="navbar" id="nav1">
         <div class="navbar-left">
             <a href="#">Helpline : +000 00 000 +000 000 000</a>
@@ -23,59 +49,41 @@
             <a href="#">For inquiry: xxxxxxxxx@xxxxxxx xxxx.com</a>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand me-auto ms-lg-5" href="#">
-                <img src="{{ asset('storage/images/image.png')}}" alt="Bootstrap">
-            </a>
-            <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <img id="img" src="https://static.vecteezy.com/system/resources/previews/024/044/735/non_2x/shopping-cart-logo-design-cart-icon-ecommerce-logo-vector.jpg" alt="Image 1"><p class="mb-0">
+                <span class="text-danger fw-bold">Home</span>
+                <span class="text-dark fw-bold">Heaven</span>
+            </p><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <div class="search-container">
-                            <input class="form-control ms-5" type="search" placeholder="Type to Search" aria-label="Search">
-                            <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
-                        </div>                </ul>
-                <ul class="navbar-nav">
-                    <div class="d-flex align-items-center ms-auto ">
-                        <div class="icon-container me-5 mt-2">
-                            <i class="fas fa-wallet fa-xl"></i>
-                            <p class="mb-0" style="font-size: 14px;">Wallet</p>
-                        </div>
-                        <div class="icon-container me-2 mt-2">
-                            <i class="fas fa-cart-shopping fa-xl" ></i>
-                            <p class="mb-0"style="font-size: 14px;">Cart</p>
-                        </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <form class="d-flex me-5">
+                <div class="input-group">
+                    <input type="text" class="form-control ms-4" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+                <img id="img" src="{{ asset('storage/images/image.png')}}" alt="Image 1">
+                <ul class="navbar-nav mb-2 mb-lg-0 me-2">
+                    <li class="nav-item me-4">
+                        <a class="nav-link active fs-6 " href="#">
+                             FOR SUPPORT MAIL US:<br>
+                            <small class="text-muted d-inline">info@example.com</small></a>
+                    </li>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <img style="width: 40px;height: 40px;" src="https://www.realmenrealstyle.com/wp-content/uploads/2023/03/Classic-Pompadour.jpg" class="rounded-circle profile" alt="Profile Image">
 
 
-                    <li class="nav-item">
-                        <a class="nav-link active fs-6" href="#">
-                            Welcome<br>
-                            <p class="d-inline fw-semibold">Michele Tony</p>
-                        </a>
-                    </li>
-
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-
-                <img id="img" class="country" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSakyD6ipmNZjd8YZL6KDqa6hNTit1IW2FZrw&s" alt="Country Image">
                 <li class="nav-item">
-                        <p class="d-inline ms-1 mt-1">En</p>
+                    <a class="nav-link active fs-6" href="#">
+                        Welcome<br>
+                        <p class="d-inline fw-semibold">Michele Tony</p>
                     </a>
                 </li>
-                <div class="dropdown ">
+
+            <div class="dropdown">
                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
 
                 </button>
@@ -84,11 +92,19 @@
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-                </div>
-
+            </div>
+                </ul>
+                <a href="{{ route('mycart') }}" class="icon-container me-2 mt-4 ms-4">
+                    <div>
+                        <i class="fa-solid fa-cart-shopping fa-xl " style="color: #000000;"></i>                        <p class="mb-3 text-dark" style="font-size: 14px;">Cart</p>
+                    </div>
+                </a>
+                <a href="{{route('logout')}}" type="button" class="btn btn-danger  ms-5" >Logout</a>
+            </form>
             </div>
         </div>
     </nav>
+
 
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -120,7 +136,6 @@
             @endforeach
         </div>
     </div>
-
     <div class="slider-nav">
         @foreach($carouselItems as $index => $item)
             <a href="#slide-{{ $index + 1 }}" data-bs-target="#carouselExample" data-bs-slide-to="{{ $index }}" class="{{ $index === 0 ? 'active' : '' }}"></a>
@@ -195,9 +210,10 @@
 </div>
 </div>
 
+<form action="" method="post">
 <div class="container">
 <div class="row">
-
+    @csrf
                @php
     $totalProducts = $products ? count($products) : 0;
     if ($totalProducts > 0) {
@@ -210,8 +226,8 @@
     @foreach($products as $index => $product)
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 product-card">
             <div class="card mt-5">
-                <div class="card-body custom-card-body" id="boxcd">
-                    <img id="imgpc" src="{{ asset('storage/images/' . $product->image) }}" class="card-img" alt="{{ $product->name }}">
+                <div class=" custom-card-body" id="boxcd">
+                    <img id="imgpc" src="{{ asset('storage/images/' . $product->image) }}" class="product-card" alt="{{ $product->name }}">
                     <p class="card-title fw-bold" style="font-size: 13px;">{{ $product->name }}</p>
                     <p class="card-text mt-1" style="font-size: 10px;">{{ $product->description }}</p>
                     <div class="row">
@@ -225,7 +241,8 @@
                             <p class="card-notify-badge fw-semibold">{{ $product->discount }}% OFF</p>
                         </div>
                     </div>
-                    <a href="#" id="mmm" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</a>
+
+                    <a href="{{route('add_cart',$product->id)}}" id="mmm" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</a>
                     <p class="card-badge fw-semibold">LIMITED COLLECTIONS</p>
                     @if (isset($uniqueIndexes))
                         @if ($index == $uniqueIndexes[0])
@@ -247,13 +264,13 @@
         </div>
     @endforeach
 @endif
-
 </div>
+</form>
 </div>
 <br>
 
     <div class="col-12 text-center">
-        <a href="#" id="yes" class="btn btn-primary">View More</a>
+        <a href="{{route('productlisting')}}" id="yes" class="btn btn-primary">View More</a>
     </div>
 
 <br>
@@ -266,7 +283,7 @@
                     <p class="fs-1" id="h1ft">LOGO</p>
                     <h5 class="underline">Contact Us</h5>
                     <p><i class="fa-solid fa-phone fa-lg me-3"></i>  +90 7034859858</p>
-                    <p><i class="fa-solid fa-envelope fa-lg me-3"></i> GingerTech@gmail.com</p>
+                    <p><i class="fa-solid fa-envelope fa-lg me-3"></i> Homeheaven@gmail.com</p>
                 </div>
             </div>
             <div class="col-md-2 column2">
@@ -315,7 +332,9 @@
         </div>
         <hr>
         <p class="text-centre" style="text-align: center;">
-            Copyright &copy; 2017 Car Rental Portal. All Rights Reserved, Developed by Ginger Technologies
+            Copyright &copy; 2017 Car Rental Portal. All Rights Reserved, Developed by Home Heaven
         </p>
+
+
 </body>
 </html>
